@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+      "browser": true,
+      "es2021": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "@typescript-eslint",
+      "react-hooks"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+		"react/prop-types": "off", // desliga o warn de prop, já que estamos usando TS
+		"react/react-in-jsx-scope": "off", // utilizando nextjs, não é necessário declarar o react em cada arquivo
+		"explicit-module-boundary-types": "off" // desabilita o módulo que faz necessário tipar toda variável, mesmo que ela possa ser inferida
+  }
+}
