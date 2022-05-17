@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBar /> should render the heading 1`] = `
+<main
+  class="sc-bczRLJ"
+>
+  <h1>
+    TopBar
+  </h1>
+</main>
+`;

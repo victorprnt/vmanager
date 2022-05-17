@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfoCard /> should render the heading 1`] = `
+<div
+  class="sc-bczRLJ euDIkm"
+>
+  <img
+    alt="Infocard Image"
+    class="infocard"
+    src=""
+  />
+  <div
+    class="infocard-text"
+  >
+    <p
+      class="infocard-value"
+    >
+      Value
+    </p>
+    <p
+      class="infocard-label"
+    >
+      Label
+    </p>
+  </div>
+</div>
+`;

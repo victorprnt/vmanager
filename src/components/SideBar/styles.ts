@@ -5,14 +5,18 @@ export const Wrapper = styled.nav`
   flex-direction: column;
   align-items: center;
 
+  position: absolute;
+  top: 0;
+  left: 0;
+
   height: 100vh;
-  max-width: 4%;
+  max-width: 4vw;
   background-color: #202020;
 
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    max-width: 10%;
+    max-width: 10vw;
 
     .page-link-container {
       justify-content: flex-start;

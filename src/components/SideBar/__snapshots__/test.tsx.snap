@@ -2,7 +2,7 @@
 
 exports[`<SideBar /> should render the left navbar 1`] = `
 <nav
-  class="sc-bczRLJ LGoUq"
+  class="sc-bczRLJ eqBENw"
 >
   <div
     class="logo-container"

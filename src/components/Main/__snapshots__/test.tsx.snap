@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the main page 1`] = `
+<div
+  class="sc-hKMtZM hOqbbF"
+>
+  <nav
+    class="sc-dkzDqf jPCrrh"
+  >
+    <div
+      class="logo-container"
+    >
+      <img
+        alt="mph logo"
+        class="logo"
+        src="mph-logo.png"
+      />
+    </div>
+    <div
+      class="page-link-container page-dashboard"
+    >
+      <a
+        class="page-link"
+        href="/dashboard"
+      >
+        <img
+          alt="Dashboard image to lead to dashboard page"
+          src="dashboard-line.svg"
+          title="Dashboard link"
+        />
+        <p
+          class="page-link-text"
+        >
+          Dashboard
+        </p>
+      </a>
+    </div>
+    <div
+      class="page-link-container page-hosts"
+    >
+      <a
+        class="page-link"
+        href="/hosts"
+      >
+        <img
+          alt="Table image to lead to the hosts page"
+          src="computer-line.svg"
+          title="Hosts link"
+        />
+        <p
+          class="page-link-text"
+        >
+          Hosts
+        </p>
+      </a>
+    </div>
+    <div
+      class="page-link-container page-vulnerabilities"
+    >
+      <a
+        class="page-link"
+        href="/vulnerabilities"
+      >
+        <img
+          alt="Table image to lead to the vulnerability page"
+          src="table-line.svg"
+          title="Vulnerabilities link"
+        />
+        <p
+          class="page-link-text"
+        >
+          Vulnerabilites
+        </p>
+      </a>
+    </div>
+  </nav>
+  <section
+    class="sc-gsnTZi deHIlp"
+  >
+    <h1>
+      CardsContainer
+    </h1>
+    <div
+      class="infocard-container"
+    >
+      <div
+        class="sc-bczRLJ euDIkm"
+      >
+        <img
+          alt="Infocard Image"
+          class="infocard"
+          src=""
+        />
+        <div
+          class="infocard-text"
+        >
+          <p
+            class="infocard-value"
+          >
+            Value
+          </p>
+          <p
+            class="infocard-label"
+          >
+            Label
+          </p>
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ euDIkm"
+      >
+        <img
+          alt="Infocard Image"
+          class="infocard"
+          src=""
+        />
+        <div
+          class="infocard-text"
+        >
+          <p
+            class="infocard-value"
+          >
+            Value
+          </p>
+          <p
+            class="infocard-label"
+          >
+            Label
+          </p>
+        </div>
+      </div>
+      <div
+        class="sc-bczRLJ euDIkm"
+      >
+        <img
+          alt="Infocard Image"
+          class="infocard"
+          src=""
+        />
+        <div
+          class="infocard-text"
+        >
+          <p
+            class="infocard-value"
+          >
+            Value
+          </p>
+          <p
+            class="infocard-label"
+          >
+            Label
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
