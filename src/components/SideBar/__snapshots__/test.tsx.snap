@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideBar /> should render the left navbar 1`] = `
+<nav
+  class="sc-bczRLJ LGoUq"
+>
+  <div
+    class="logo-container"
+  >
+    <img
+      alt="mph logo"
+      class="logo"
+      src="mph-logo.png"
+    />
+  </div>
+  <div
+    class="page-link-container page-dashboard"
+  >
+    <a
+      class="page-link"
+      href="/dashboard"
+    >
+      <img
+        alt="Dashboard image to lead to dashboard page"
+        src="dashboard-line.svg"
+        title="Dashboard link"
+      />
+      <p
+        class="page-link-text"
+      >
+        Dashboard
+      </p>
+    </a>
+  </div>
+  <div
+    class="page-link-container page-hosts"
+  >
+    <a
+      class="page-link"
+      href="/hosts"
+    >
+      <img
+        alt="Table image to lead to the hosts page"
+        src="computer-line.svg"
+        title="Hosts link"
+      />
+      <p
+        class="page-link-text"
+      >
+        Hosts
+      </p>
+    </a>
+  </div>
+  <div
+    class="page-link-container page-vulnerabilities"
+  >
+    <a
+      class="page-link"
+      href="/vulnerabilities"
+    >
+      <img
+        alt="Table image to lead to the vulnerability page"
+        src="table-line.svg"
+        title="Vulnerabilities link"
+      />
+      <p
+        class="page-link-text"
+      >
+        Vulnerabilites
+      </p>
+    </a>
+  </div>
+</nav>
+`;
