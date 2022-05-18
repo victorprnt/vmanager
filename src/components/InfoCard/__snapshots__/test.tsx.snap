@@ -2,7 +2,7 @@
 
 exports[`<InfoCard /> should render the heading 1`] = `
 <div
-  class="sc-bczRLJ euDIkm"
+  class="sc-bczRLJ euDIkm infocard"
 >
   <img
     alt="Infocard Image"

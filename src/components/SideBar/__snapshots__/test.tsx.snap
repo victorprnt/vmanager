@@ -18,7 +18,7 @@ exports[`<SideBar /> should render the left navbar 1`] = `
   >
     <a
       class="page-link"
-      href="/dashboard"
+      href="/"
     >
       <img
         alt="Dashboard image to lead to dashboard page"

@@ -5,7 +5,7 @@ import * as S from './styles'
 
 const Main = () => (
   <S.Wrapper>
-    <SideBar aria-label="Side Bar" />
+    {/* <SideBar aria-label="Side Bar" /> */}
     <CardsContainer />
   </S.Wrapper>
 )

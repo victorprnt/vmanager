@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 const InfoCard = () => (
-  <S.Wrapper>
+  <S.Wrapper className="infocard">
     <img src="" alt="Infocard Image" className="infocard" />
     <div className="infocard-text">
       <p className="infocard-value">Value</p>

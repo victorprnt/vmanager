@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfoTable /> should render the table content 1`] = `
+<section
+  class="sc-gsnTZi hsaFmk"
+>
+  <div
+    class="table-container"
+  >
+    <div
+      class="input"
+    >
+      <input
+        class="filter"
+        placeholder="Search Filter"
+        type="text"
+      />
+      <button
+        class="search-button"
+        type="button"
+      >
+        Search
+      </button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Column 01
+          </th>
+          <th>
+            Column 02
+          </th>
+          <th>
+            Column 03
+          </th>
+          <th>
+            Column 04
+          </th>
+          <th>
+            Column 05
+          </th>
+          <th>
+            Column 06
+          </th>
+          <th>
+            Column 07
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="sc-bczRLJ"
+        >
+          <td>
+            Info 01
+          </td>
+          <td>
+            Info 02
+          </td>
+          <td>
+            Inof 03
+          </td>
+          <td>
+            Info 04
+          </td>
+          <td>
+            Info 05
+          </td>
+          <td>
+            Info 06
+          </td>
+          <td>
+            Info 07
+          </td>
+        </tr>
+        <tr
+          class="sc-bczRLJ"
+        >
+          <td>
+            Info 01
+          </td>
+          <td>
+            Info 02
+          </td>
+          <td>
+            Inof 03
+          </td>
+          <td>
+            Info 04
+          </td>
+          <td>
+            Info 05
+          </td>
+          <td>
+            Info 06
+          </td>
+          <td>
+            Info 07
+          </td>
+        </tr>
+        <tr
+          class="sc-bczRLJ"
+        >
+          <td>
+            Info 01
+          </td>
+          <td>
+            Info 02
+          </td>
+          <td>
+            Inof 03
+          </td>
+          <td>
+            Info 04
+          </td>
+          <td>
+            Info 05
+          </td>
+          <td>
+            Info 06
+          </td>
+          <td>
+            Info 07
+          </td>
+        </tr>
+        <tr
+          class="sc-bczRLJ"
+        >
+          <td>
+            Info 01
+          </td>
+          <td>
+            Info 02
+          </td>
+          <td>
+            Inof 03
+          </td>
+          <td>
+            Info 04
+          </td>
+          <td>
+            Info 05
+          </td>
+          <td>
+            Info 06
+          </td>
+          <td>
+            Info 07
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      class="footer"
+    >
+      <p
+        class="text-results"
+      >
+        Showing 1-50 of 200 results
+      </p>
+      <div
+        class="page-selector"
+      >
+         
+        &lt;&lt; &lt; 1 2 &gt; &gt;&gt;
+         
+      </div>
+    </div>
+  </div>
+</section>
+`;

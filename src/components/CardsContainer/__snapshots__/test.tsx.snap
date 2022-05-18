@@ -1,17 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CardsContainer /> should render the heading 1`] = `
+exports[`<CardsContainer /> should render the main portion of the cards 1`] = `
 <section
-  class="sc-gsnTZi deHIlp"
+  class="sc-dkzDqf grYqif"
 >
-  <h1>
-    CardsContainer
-  </h1>
   <div
     class="infocard-container"
   >
     <div
-      class="sc-bczRLJ euDIkm"
+      class="sc-gsnTZi ggXPc infocard"
     >
       <img
         alt="Infocard Image"
@@ -34,7 +31,7 @@ exports[`<CardsContainer /> should render the heading 1`] = `
       </div>
     </div>
     <div
-      class="sc-bczRLJ euDIkm"
+      class="sc-gsnTZi ggXPc infocard"
     >
       <img
         alt="Infocard Image"
@@ -57,7 +54,7 @@ exports[`<CardsContainer /> should render the heading 1`] = `
       </div>
     </div>
     <div
-      class="sc-bczRLJ euDIkm"
+      class="sc-gsnTZi ggXPc infocard"
     >
       <img
         alt="Infocard Image"
@@ -79,6 +76,42 @@ exports[`<CardsContainer /> should render the heading 1`] = `
         </p>
       </div>
     </div>
+  </div>
+  <div
+    class="sc-bczRLJ iZVTKG"
+  >
+    <h2
+      class="graph-title graph-text"
+    >
+      Graph Title
+    </h2>
+    <h3
+      class="graph-subtitle graph-text"
+    >
+      subtitle
+    </h3>
+    <img
+      alt="Graph image"
+      src=""
+    />
+  </div>
+  <div
+    class="sc-bczRLJ iZVTKG"
+  >
+    <h2
+      class="graph-title graph-text"
+    >
+      Graph Title
+    </h2>
+    <h3
+      class="graph-subtitle graph-text"
+    >
+      subtitle
+    </h3>
+    <img
+      alt="Graph image"
+      src=""
+    />
   </div>
 </section>
 `;

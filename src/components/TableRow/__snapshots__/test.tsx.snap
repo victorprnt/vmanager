@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableRow /> should render the heading 1`] = `
+<tr
+  class="sc-bczRLJ"
+>
+  <td>
+    Info 01
+  </td>
+  <td>
+    Info 02
+  </td>
+  <td>
+    Inof 03
+  </td>
+  <td>
+    Info 04
+  </td>
+  <td>
+    Info 05
+  </td>
+  <td>
+    Info 06
+  </td>
+  <td>
+    Info 07
+  </td>
+</tr>
+`;

@@ -1,13 +1,16 @@
-import './App.css'
-import Main from './components/Main'
+import { BrowserRouter } from 'react-router-dom'
+import SideBar from './components/SideBar'
+
+import AppRoutes from './routes'
 import GlobalStyles from './styles/global'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyles />
-      <Main />
-    </>
+      <SideBar />
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 

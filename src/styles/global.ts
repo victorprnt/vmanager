@@ -39,6 +39,12 @@ const GlobalStyles = createGlobalStyle`
     color: #fff;
   }
 
+  #root {
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+
   button {
     cursor: pointer;
     border: none;

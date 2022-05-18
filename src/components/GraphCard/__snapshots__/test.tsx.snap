@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GraphCard /> should render the heading 1`] = `
+<div
+  class="sc-bczRLJ iZVTKG"
+>
+  <h2
+    class="graph-title graph-text"
+  >
+    Graph Title
+  </h2>
+  <h3
+    class="graph-subtitle graph-text"
+  >
+    subtitle
+  </h3>
+  <img
+    alt="Graph image"
+    src=""
+  />
+</div>
+`;
