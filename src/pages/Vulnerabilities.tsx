@@ -1,7 +1,7 @@
-import InfoTable from '../components/InfoTable'
+import VulnerabilityTable from '../components/VulnerabilityTable'
 
 const Vulnerabilities = () => {
-  return <InfoTable />
+  return <VulnerabilityTable />
 }
 
 export default Vulnerabilities

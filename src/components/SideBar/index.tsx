@@ -1,18 +1,12 @@
-import { useEffect } from 'react'
-
-// import { postApiAuth, getApiAuth } from '../../services/v-services'
 import * as S from './styles'
 
+// import { postApiAuth, getApiAuth } from '../../services/v-services'
 import mphlogo from '../../assets/mph-logo.png'
 import dashboardIcon from '../../assets/icons/dashboard-line.svg'
 import hostsIcon from '../../assets/icons/computer-line.svg'
 import vulnerabilityIcon from '../../assets/icons/table-line.svg'
 
 const SideBar = () => {
-  useEffect(() => {
-    // getApiAuth()
-  }, [])
-
   return (
     <S.Wrapper>
       <div className="logo-container">
