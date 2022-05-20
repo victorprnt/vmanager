@@ -14,7 +14,7 @@ const SideBar = () => {
       </div>
 
       <div className="page-link-container page-dashboard">
-        <a href="/" className="page-link">
+        <a href="/dashboard" className="page-link">
           <img
             src={dashboardIcon}
             alt="Dashboard image to lead to dashboard page"

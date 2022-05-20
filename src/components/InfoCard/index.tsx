@@ -3,7 +3,7 @@ import * as S from './styles'
 type InfocardProps = {
   label: string
   value: number
-  total: number
+  total?: number
 }
 
 const InfoCard = ({ label, value, total }: InfocardProps) => (
@@ -11,7 +11,7 @@ const InfoCard = ({ label, value, total }: InfocardProps) => (
     <img src="" alt="Infocard Image" className="infocard" />
     <div className="infocard-text">
       <p className="infocard-value">
-        {value} / {total}
+        {value} {total && '/'} {total}
       </p>
       <p className="infocard-label">{label}</p>
     </div>

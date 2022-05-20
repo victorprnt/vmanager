@@ -1,36 +1,32 @@
-export {}
-// import qs from 'qs'
+import { getTokenFromLocalStorage, storeToken } from '../utils/persistedState'
 
-// import token from '../components/Main/index'
+export async function getToken(username: string, password: string) {
+  const myHeaders = new Headers()
+  myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
+  myHeaders.append(
+    'Cookie',
+    'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
+  )
 
-// const token = token
+  const urlencoded = new URLSearchParams()
+  urlencoded.append('username', username)
+  urlencoded.append('password', password)
 
-// // Post user credentials to obtain token authorization
-// const authPostData = qs.stringify({
-//   username: 'victorprnt',
-//   password: '=-rq{Xw,3K2Xynsl5cVu'
-// })
-// export const postAuth = {
-//   method: 'post',
-//   url: 'http://201.49.62.134:8080/api-token-auth/',
-//   headers: {
-//     'Content-Type': 'application/x-www-form-urlencoded',
-//     Cookie:
-//       'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-//   },
-//   data: authPostData
-// }
+  await fetch('http://201.49.62.134:8080/api-token-auth/', {
+    method: 'POST',
+    headers: myHeaders,
+    body: urlencoded,
+    redirect: 'follow'
+  })
+    .then((response) => response.text())
+    .then((result) => {
+      // setToken(JSON.parse(result).token)
+      storeToken(JSON.parse(result).token)
+      // console.log('token: ' + token)
+    })
+    .catch((error) => console.log('error', error))
+}
 
-// // Get the assets list
-// const getAssetsData = qs.stringify({})
-// export const getAssets = {
-//   method: 'get',
-//   url: 'http://201.49.62.134:8080/api/assets/',
-//   headers: {
-//     Authorization: `Token ${token}`,
-//     'Content-Type': 'application/x-www-form-urlencoded',
-//     Cookie:
-//       'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-//   },
-//   data: getAssetsData
-// }
+export async function getVulnerableCount() {
+  return
+}

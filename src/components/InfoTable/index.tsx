@@ -7,8 +7,8 @@ const InfoTable = () => {
   const { hosts, handleHosts, token, handleToken } = useContext(VManagerContext)
 
   useEffect(() => {
-    if (!token) handleToken()
-    if (hosts.length === 0 && token !== '') handleHosts()
+    // if (!token) handleToken()
+    if (hosts.length === 0) handleHosts()
   })
 
   return (

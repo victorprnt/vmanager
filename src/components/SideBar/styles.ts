@@ -15,7 +15,7 @@ export const Wrapper = styled.nav`
 
   transition: all 0.3s ease-in-out;
 
-  &:hover {
+  /* &:hover {
     max-width: 10vw;
 
     .page-link-container {
@@ -27,7 +27,7 @@ export const Wrapper = styled.nav`
         }
       }
     }
-  }
+  } */
 
   .logo-container {
     max-width: 60px;

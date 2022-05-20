@@ -7,7 +7,7 @@ import * as S from './styles'
 const Main = () => {
   const { handleToken } = useContext(VManagerContext)
   useEffect(() => {
-    handleToken()
+    // handleToken()
   }, [])
   return (
     <S.Wrapper>

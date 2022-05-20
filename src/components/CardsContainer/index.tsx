@@ -8,14 +8,20 @@ const CardsContainer = () => {
   const {
     totalHosts,
     vulnerableHosts,
-    handleVulnerableHosts,
-    token,
-    handleToken
+    handleVulnerableHostsCount,
+    totalVulnearabilities,
+    activeVulnearabilities,
+    handleVulnerabilitiesCount,
+    riskAverage,
+    handleRiskAverage
   } = useContext(VManagerContext)
 
   useEffect(() => {
-    if (!token) handleToken()
-    if (totalHosts === 0 && vulnerableHosts === 0) handleVulnerableHosts()
+    // if (!token) handleToken()
+    if (totalHosts === 0 && vulnerableHosts === 0) handleVulnerableHostsCount()
+    if (activeVulnearabilities === 0 && totalVulnearabilities === 0)
+      handleVulnerabilitiesCount()
+    if (riskAverage === 0) handleRiskAverage()
   })
   return (
     <S.Wrapper>
@@ -29,14 +35,13 @@ const CardsContainer = () => {
         <InfoCard
           // aria-label="infocard"
           label="Vulnerabilities"
-          value={vulnerableHosts}
-          total={totalHosts}
+          value={activeVulnearabilities}
+          total={totalVulnearabilities}
         />
         <InfoCard
           // aria-label="infocard"
           label="Average risk"
-          value={vulnerableHosts}
-          total={totalHosts}
+          value={riskAverage}
         />
         {/* <InfoCard aria-label="infocard" />
         <InfoCard aria-label="infocard" /> */}
