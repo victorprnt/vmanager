@@ -53,7 +53,7 @@ const CardsContainer = () => {
         />
         <InfoCard
           // aria-label="infocard"
-          label="Average risk"
+          label="Average Risk"
           value={riskAverage}
         />
         {/* <InfoCard aria-label="infocard" />
