@@ -1,8 +1,6 @@
 import { createContext, ReactNode, useState } from 'react'
-import axios from 'axios'
-import qs from 'qs'
 import { getTokenFromLocalStorage, storeToken } from '../utils/persistedState'
-import { getToken, getVulnerableCount } from '../services/v-services'
+import { getToken } from '../services/v-services'
 
 export type HostProps = {
   id: number
@@ -15,6 +13,11 @@ export type HostProps = {
   vulnerabilities?: VulnerabilityProps[]
 }
 
+export type TopAssetProps = {
+  host: string
+  vuln_count: number
+}
+
 export type VulnerabilityProps = {
   id: number
   title: string
@@ -22,6 +25,13 @@ export type VulnerabilityProps = {
   cvss: string
   publication_date: string
   asset_count: number
+}
+
+export type SeverityProps = {
+  low: number
+  medium: number
+  high: number
+  critic: number
 }
 
 interface VManagerContextData {
@@ -41,6 +51,10 @@ interface VManagerContextData {
   handleVulnerabilitiesCount: () => void
   riskAverage: number
   handleRiskAverage: () => void
+  topAssets: TopAssetProps[]
+  handleTopAssets: () => void
+  severity: SeverityProps
+  handleSeverity: () => void
 }
 
 interface VmanagerProviderProps {
@@ -62,6 +76,13 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
   const [vulnerabilities, setVulnerabilities] = useState<VulnerabilityProps[]>(
     []
   )
+  const [topAssets, setTopAssets] = useState<TopAssetProps[]>([])
+  const [severity, setSeverity] = useState<SeverityProps>({
+    low: 0,
+    medium: 0,
+    high: 0,
+    critic: 0
+  })
 
   function handleEmail(queryEmail: string) {
     setEmail(queryEmail)
@@ -86,7 +107,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
       'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
     )
 
-    fetch('http://201.49.62.134:8080/api/dashboard/cards/asset', {
+    await fetch('http://201.49.62.134:8080/api/dashboard/cards/asset', {
       method: 'GET',
       headers: myHeaders,
       redirect: 'follow'
@@ -109,7 +130,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
       'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
     )
 
-    fetch('http://201.49.62.134:8080/api/dashboard/cards/vulnerability', {
+    await fetch('http://201.49.62.134:8080/api/dashboard/cards/vulnerability', {
       method: 'GET',
       headers: myHeaders,
       redirect: 'follow'
@@ -134,7 +155,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
       'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
     )
 
-    fetch('http://201.49.62.134:8080/api/dashboard/cards/risk', {
+    await fetch('http://201.49.62.134:8080/api/dashboard/cards/risk', {
       method: 'GET',
       headers: myHeaders,
       redirect: 'follow'
@@ -196,13 +217,59 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
       'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
     )
 
-    fetch('http://201.49.62.134:8080/api/vulnerabilities/', {
+    await fetch('http://201.49.62.134:8080/api/vulnerabilities/', {
       method: 'GET',
       headers: myHeaders,
       redirect: 'follow'
     })
       .then((response) => response.text())
       .then((result) => setVulnerabilities(JSON.parse(result).results))
+      .catch((error) => console.log('error', error))
+  }
+
+  async function handleTopAssets() {
+    const token = getTokenFromLocalStorage()
+    const myHeaders = new Headers()
+    myHeaders.append('Authorization', `Token ${token}`)
+    myHeaders.append(
+      'Cookie',
+      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
+    )
+
+    await fetch('http://201.49.62.134:8080/api/dashboard/charts/top-assets', {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    })
+      .then((response) => response.text())
+      .then((result) => setTopAssets(JSON.parse(result)))
+      .catch((error) => console.log('error', error))
+  }
+
+  async function handleSeverity() {
+    const token = getTokenFromLocalStorage()
+    const myHeaders = new Headers()
+    myHeaders.append('Authorization', `Token ${token}`)
+    myHeaders.append(
+      'Cookie',
+      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
+    )
+
+    fetch('http://201.49.62.134:8080/api/dashboard/charts/severity', {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    })
+      .then((response) => response.text())
+      .then((result) => {
+        const severityTemp = {
+          low: JSON.parse(result).Baixo,
+          medium: JSON.parse(result).Médio,
+          high: JSON.parse(result).Alto,
+          critic: JSON.parse(result).Crítico
+        }
+        setSeverity({ ...severityTemp })
+      })
       .catch((error) => console.log('error', error))
   }
 
@@ -224,7 +291,11 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
         activeVulnearabilities,
         handleVulnerabilitiesCount,
         riskAverage,
-        handleRiskAverage
+        handleRiskAverage,
+        topAssets,
+        handleTopAssets,
+        severity,
+        handleSeverity
       }}
     >
       {children}

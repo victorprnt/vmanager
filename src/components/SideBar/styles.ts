@@ -9,7 +9,7 @@ export const Wrapper = styled.nav`
   top: 0;
   left: 0;
 
-  height: 100vh;
+  height: 100%;
   max-width: 4vw;
   background-color: #202020;
 
