@@ -16,11 +16,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/victorprnt/vmanager">
+  <!-- <a href="https://github.com/victorprnt/vmanager">
     <img src="./src/assets/images/tmdb-logo.png" alt="Logo" width="90">
-  </a>
+  </a> -->
 
-  <h3 align="center">V-Manager</h3>
+  <h1 align="center">V-Manager</h1>
 
   <p align="center">
     !
@@ -55,7 +55,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <!-- <li><a href="#license">License</a></li> -->
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -65,7 +65,7 @@
 
 ## About The Project
 
-Using an API
+Using an API containing hosts and vulnerabilities, and also some other details, this project has the objective to automate the process of taking actions given the criticalness that can be inferred
 
 ### Built With
 
@@ -73,7 +73,8 @@ This project was built using:
 
 - [React](https://reactjs.org/)
 - [Styled Components](https://styled-components.com/)
-- []()
+- [Recharts](https://recharts.org/en-US/)
+- [Typescript](https://www.typescriptlang.org/)
 
 <!-- GETTING STARTED -->
 
@@ -105,7 +106,12 @@ You'll also need Node.js installed. Download it from the link below.
    ```sh
     yarn start
    ```
-4. You should access the app through
+4. A file .env.local must be created at the root project folder and the cookie token must be provided. The format of the local variable is the one following:
+```
+REACT_APP_CSRF=csrftoken={the value of the cookie must be provided here}
+```
+
+5. You should access the app through
 
    [http://localhost:3000](http://localhost:3000)
 
@@ -113,21 +119,32 @@ You'll also need Node.js installed. Download it from the link below.
 
 ## Usage
 
+### Login
+The users must provide a username and password to authenticate themselves and start using the V-Manager.
 ### Dashboard
 
-You can see different tables.
+Using the Dashboard, the user is able to find three cards where is possible to infer: 
+- The vulnerable assets amount / total amount of assets;
+- The quantity of active vulnerabilities / total vulnerabilities;
+- The average risk according to the vulnerable hosts;
+- A graph containing the 10 most vulnerable hosts and
+- The distribution of vulnerabilities by severity.
 
 ### Hosts table
 
-You can see tables filtered by host
+In the hosts table, the user is able to read the table of hosts containing infos about the vulnerable hosts. Infos like, ID, name and amount of vulnerabilities.
 
 ### Host details
 
-You can check host info and set a vulnerability as solved by
+Page yet to be implemented.
 
 ### Vulnerability table
 
-You can check the a table filtered by vulnerabilities
+In the vulnerabilities table, the user is able to read the vulnerabilty name, its severity, the CVSS, the publishing date and how many hosts it affects.
+
+### Vulnerabily detail
+
+Page yet to be implemented.
 
 <!--_For more examples, please refer to the [Documentation](https://example.com)_ -->
 
@@ -137,7 +154,7 @@ You can check the a table filtered by vulnerabilities
 
 See the [open issues](https://github.com/victorprnt/vmanager/issues) for a list of proposed features (and known issues).
 
-Go to the [project tracker](https://parvic.notion.site/TMDB-App-cc07184ba65649408eec9fa35d8f44e4) on Notion
+Go to the [project tracker](https://parvic.notion.site/V-Manager-840495542afd477aba47b3e2649847a0) on Notion
 
 <!-- CONTRIBUTING -->
 

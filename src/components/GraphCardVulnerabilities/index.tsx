@@ -20,9 +20,6 @@ const GraphCardVulnerabilities = ({
     { severity: 'Critic', amount: severity.critic }
   ]
 
-  console.log('severity-')
-  console.log(severity)
-
   return (
     <S.Wrapper>
       <h2 className="graph-title graph-text">{title}</h2>

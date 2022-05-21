@@ -4,7 +4,13 @@ import GraphCardVulnerabilities from '.'
 
 const props = {
   title: 'Test Title',
-  subtitle: 'Test Subtitle'
+  subtitle: 'Test Subtitle',
+  severity: {
+    low: 0,
+    medium: 1,
+    high: 2,
+    critic: 3
+  }
 }
 
 describe('<GraphCardVulnerabilities />', () => {

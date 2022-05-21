@@ -102,10 +102,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch('http://201.49.62.134:8080/api/dashboard/cards/asset', {
       method: 'GET',
@@ -125,10 +122,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch('http://201.49.62.134:8080/api/dashboard/cards/vulnerability', {
       method: 'GET',
@@ -150,10 +144,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
 
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch('http://201.49.62.134:8080/api/dashboard/cards/risk', {
       method: 'GET',
@@ -169,10 +160,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch('http://201.49.62.134:8080/api/assets/', {
       method: 'GET',
@@ -191,10 +179,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch(`http://201.49.62.134:8080/api/assets/${id}`, {
       method: 'GET',
@@ -212,10 +197,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch('http://201.49.62.134:8080/api/vulnerabilities/', {
       method: 'GET',
@@ -231,10 +213,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     await fetch('http://201.49.62.134:8080/api/dashboard/charts/top-assets', {
       method: 'GET',
@@ -250,10 +229,7 @@ export function VManagerProvider({ children }: VmanagerProviderProps) {
     const token = getTokenFromLocalStorage()
     const myHeaders = new Headers()
     myHeaders.append('Authorization', `Token ${token}`)
-    myHeaders.append(
-      'Cookie',
-      'csrftoken=vb01HtTSwIENduyagptoiTLOsiSCbcjQyHuZ8T3QVcMoxAxvADPuNyafPh4qWzBv'
-    )
+    myHeaders.append('Cookie', `${process.env.REACT_APP_CSRF}`)
 
     fetch('http://201.49.62.134:8080/api/dashboard/charts/severity', {
       method: 'GET',

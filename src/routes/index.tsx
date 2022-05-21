@@ -8,7 +8,7 @@ import LoginPage from '../pages/LoginPage'
 
 const AppRoutes = () => (
   <Routes>
-    <Route path="/login" element={<LoginPage />} />
+    <Route path="/" element={<LoginPage />} />
     <Route path="/dashboard" element={<Dashboard />} />
     <Route path="/hosts" element={<Hosts />} />
     <Route path="/vulnerabilities" element={<Vulnerabilities />} />
